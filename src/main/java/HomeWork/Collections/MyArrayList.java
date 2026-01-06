@@ -32,7 +32,7 @@ public class MyArrayList<T> implements List<T> {
     public void addByIndex(T element, int index) {
         // put your implementation here
         if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+            throw new MyIndexOutOfBoundsException(index, size);
         }
 
         if (size == elementList.length) {
