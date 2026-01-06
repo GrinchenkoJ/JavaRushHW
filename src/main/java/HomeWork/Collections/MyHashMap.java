@@ -35,6 +35,10 @@ public class MyHashMap<K, V> implements Map<K, V> {
     @Override
     public V put(K key, V value) {
         // put your implementation here
+        if (key == null) {
+            throw new MyNullKeyException();
+        }
+
         int index = getBucketIndex(key);
         Node head = buckets[index];
 
@@ -59,6 +63,8 @@ public class MyHashMap<K, V> implements Map<K, V> {
     @Override
     public V remove(K key) {
         // put your implementation here
+        if (key == null) throw new MyNullKeyException();
+
         int index = getBucketIndex(key);
         Node current = buckets[index];
         Node prev = null;

@@ -42,7 +42,7 @@ public class MyLinkedList<T> implements List<T> {
     public void addByIndex(T element, int index) {
         // put your implementation here
         if(index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Index - " + index);
+            throw new MyIndexOutOfBoundsException("Index - " + index);
         }
 
         Node newNode = new Node(element);
@@ -62,7 +62,7 @@ public class MyLinkedList<T> implements List<T> {
     public T getByIndex(int index) {
         // put your implementation here
         if(index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Index out of bounds");
+            throw new MyIndexOutOfBoundsException("Index out of bounds");
         }
         Node current = first;
         for(int i = 0; i < index; i++) {
@@ -75,7 +75,7 @@ public class MyLinkedList<T> implements List<T> {
     public T removeByIndex(int index) {
         // put your implementation here
         if(index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", size: " + size);
+            throw new MyIndexOutOfBoundsException(index, size);
         }
         Object removedItem;
         if(index == 0) {

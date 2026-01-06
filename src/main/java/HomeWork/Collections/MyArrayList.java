@@ -52,7 +52,7 @@ public class MyArrayList<T> implements List<T> {
     public T getByIndex(int index) {
         // put your implementation here
         if(index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("There is no such index!");
+            throw new MyIndexOutOfBoundsException(index, size);
         }
         return (T) elementList[index];
     }
@@ -61,7 +61,7 @@ public class MyArrayList<T> implements List<T> {
     public T removeByIndex(int index) {
         // put your implementation here
         if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+            throw new MyIndexOutOfBoundsException(index, size);
         }
 
         Object removeElement = elementList[index];
