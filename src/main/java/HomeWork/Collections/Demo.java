@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Demo {
     static void main(String[] args) {
+        System.out.println("HEllo Jeka");
         MyArrayList<Integer> myList = new MyArrayList<>();
 
         myList.add(1);
